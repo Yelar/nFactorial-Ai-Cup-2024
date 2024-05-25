@@ -1,9 +1,9 @@
 # nFactorial-Ai-Cup-2024
 Fork this repository and build nFactorial Ai Cup 2024 projects 
 
-## < Your Name >
+## < Yelarys Yertaiuly >
 
-## < Your App's Name >
+## < Hintcode >
 
 ## < Your App's description, technical considerations, etc. >
 
