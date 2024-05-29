@@ -43,11 +43,76 @@
       border-radius: 5px;
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     }
+    .container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .spoiler {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    max-height: 40px; /* Initially hidden */
+  }
+  
+  .spoiler p {
+    margin: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+  }
+  
+  .spoiler-header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .arrow {
+    margin-right: 10px;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+  }
+  
+  .down {
+    border-top: 10px solid #333;
+  }
+  
+  .up {
+    border-bottom: 10px solid #333;
+  }
+  
+  .spoiler.active {
+    max-height: 100px; /* Adjust based on the content */
+  }
+  
+  .spoiler.active p {
+    opacity: 1;
+  }
+  
+  .spoiler.active .down {
+    border-top: none;
+    border-bottom: 10px solid #333;
+  }
+  
+  .spoiler.active .up {
+    border-bottom: none;
+    border-top: 10px solid #333;
+  }
   </style>
 </head>
 <body>
   <div class="center">
-    <button id="scrapeInfo">Get hints</button>
+    <button id="scrapeInfo">Get hints!</button>
     <ul id="hint_list"></ul>
   </div>
   <script src="popup.js"></script>
